@@ -1,21 +1,27 @@
 function setText(selector, text){
 	var str = document.querySelector(selector);
 	//console.log(str);
-	if(str.length != 0){
+	try{
+	if(str ==true){
 		str.innerHTML = text;
 	}else{
-		alert('Типа Фатал Эрор');
+		alert('A tag didn`t find');
+	}}catch(e){
+		alert('Error' + e);
 	}
 }
 function setTextAll(selector, text){
 	var str = document.querySelectorAll(selector);
 	//console.log(str);
+	try{
 	if(str.length != 0){
 		str.forEach(function(element,i){
 			element.innerHTML = text + ' Its a ' + (i+1) + ' element';
 		});
 	}else{
-		alert('Типа Фатал Эрор');
+		alert('A tag didn`t find');
+	}}catch(e){
+		alert('Error' + e);
 	}
 }
 
