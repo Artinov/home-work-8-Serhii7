@@ -2,10 +2,10 @@ function setText(selector, text){
 	var str = document.querySelector(selector);
 	//console.log(str);
 	try{
-	if(str ==true){
+	if(str == true){
 		str.innerHTML = text;
 	}else{
-		alert('A tag didn`t find');
+		alert('The tag wasn`t found');
 	}}catch(e){
 		alert('Error' + e);
 	}
@@ -19,7 +19,7 @@ function setTextAll(selector, text){
 			element.innerHTML = text + ' Its a ' + (i+1) + ' element';
 		});
 	}else{
-		alert('A tag didn`t find');
+		alert('The tag wasn`t found');
 	}}catch(e){
 		alert('Error' + e);
 	}
